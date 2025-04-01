@@ -191,7 +191,7 @@ jobs:
 
       - name: Deploy to testing account
         run: |
-          sam deploy --stack-name ${TESTING_STACK_NAME} \
+          yes | sam deploy --stack-name ${TESTING_STACK_NAME} \
             --template packaged-testing.yaml \
             --capabilities CAPABILITY_IAM \
             --region ${TESTING_REGION} \
